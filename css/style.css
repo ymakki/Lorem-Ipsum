@@ -1,0 +1,466 @@
+/* =====================
+  setting
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+	text-decoration: none; /*下線や打ち消し線を非表示*/
+}
+
+.container{
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* =====================
+  Header
+===================== */
+
+header{
+	width: 100%;
+	height: 70px;
+	background-color: #EC715F;
+}
+
+.header-group{
+	display: flex; /*水平（行）方向に子要素を配置*/
+	justify-content: space-between; /*間隔を均等に配置し、最初と最後のアイテムをコンテナの端に寄せる*/
+  font-size: 0;/*不要な空白や余白を削除したり、デザイン上の要件を満たすために利用されることがあります*/
+}
+
+.logo{
+	height: 70px;
+}
+
+.nav{
+	display: flex;/*水平（行）方向に子要素を配置*/
+}
+
+.nav-list{
+	line-height: 70px; /*行の高さ（行間）を指定*/
+	padding: 0 30px; /*要素の内側の余白*/
+	list-style: none; /*リストのマーカーを非表示*/
+	font-size: 16px;
+	color: #FAFAFA;
+	width: 120px;
+}
+
+.nav-list a{
+  color: #FAFAFA;
+}
+
+/* =====================
+  MainVisual
+===================== */
+
+#mv{
+  width: 100%;
+	height: 650px;
+	text-align: center; /*要素内のテキストを水平方向に中央寄せ*/
+	color: #FAFAFA;
+	/*現在のCSSファイルから見て、1つ上のディレクトリ (../) に移動して、その下にある img ディレクトリ内の mv.png ファイルを指す*/
+  background-image: url("../img/mv.png");
+  background-size: cover; /*背景画像を要素全体*/
+  background-position: center; /*背景画像を要素の中央*/
+}
+
+.mv-title{
+  font-family: 'Raleway', sans-serif;/*フォントが利用可能でない場合に備えて代替のフォントを指定する*/
+  font-size: 64px;
+  padding-top: 200px; /*要素の内側の余白*/
+}
+
+.mv-text{
+  font-size: 20px;
+  padding-top: 10px; /*要素の内側の余白*/
+}
+
+/* =====================
+  Portfolio
+===================== */
+
+#portfolio{
+  background-color: #ECEFF1;
+}
+
+.heading{
+  text-align: center; /*要素内のテキストを水平方向に中央寄せ*/
+  padding-top: 90px; /*要素の内側の余白*/
+  font-family: 'Raleway', sans-serif;/*フォントが利用可能でない場合に備えて代替のフォントを指定する*/
+  font-size: 32px;
+}
+
+/*heading要素の後に疑似要素 ::after を使用*/
+.heading::after{
+	content: "";/*疑似要素（::before や ::after など）の内容を指定するためのプロパティ*/
+	display: block;/*要素をブロックレベル要素として表示*/
+	width: 70px;
+	height: 3px;
+	margin: 8px auto 0 auto;
+	background-color: #EC715F;
+}
+
+.heading-text{
+  text-align: center; /*要素内のテキストを水平方向に中央寄せ*/
+  padding-top: 30px; /*要素の内側の余白*/
+  font-size: 16px;
+}
+
+.production-group{
+	display: flex; /*水平（行）方向に子要素を配置*/
+	/* row; は、フレックスアイテムを水平方向（行）に配置*/
+	/*wrap; は、フレックスアイテムが行に収まりきらない場合に、新しい行に折り返す*/
+	flex-flow: row wrap;
+	width: 920px;
+	padding-bottom: 30px 0 90px 0;/*要素の内側の余白*/
+	margin: 0 auto; /*要素を中央に配置*/
+}
+
+.production{
+  width: 300px;
+  height: 250px;
+  margin: 10px 10px 0 0; /*要素の外側の余白*/
+  background-size: cover; /*背景画像を要素全体*/
+	background-position: center; /*背景画像を要素の中央*/
+}
+
+/*最初から3番目まで*/
+.production:nth-child(-n+3){
+	margin-top: 0;
+}
+
+/*3の倍数番目の要素*/
+.production:nth-child(3n){
+	margin-right: 0;
+}
+
+.bg1{
+	background-image: url(../img/sketch.jpg);
+}
+
+.bg2{
+	background-image: url(../img/websuku.png);
+}
+
+.bg3{
+	background-image: url(../img/write.jpg);
+}
+
+.bg4{
+	background-image: url(../img/webcamp.png);
+}
+
+.bg5{
+	background-image: url(../img/talk.jpg);
+}
+
+.bg6{
+	background-image: url(../img/webcamp-mother.png);
+}
+
+/* =====================
+  Feature
+===================== */
+
+#feature{
+  /*背景画像が要素全体を覆うように拡大または縮小*/
+  /*background-size: cover;*/
+  /*背景画像が要素内で中央に配置*/
+  /*background-position: center;*/
+}
+
+.strength-group{
+	display: flex;
+	width: 980px;
+	padding: 30px 0 90px 0;
+	margin: 0 auto;
+}
+
+.strength{
+  width: 320px;
+  margin-right: 10px; /*要素の外側の余白*/
+  text-align: center;/*要素内のテキストを水平方向に中央寄せ*/
+  font-size: 60px;
+}
+
+.strength-title{
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.strength-text{
+  font-size: 16px;
+  text-align: left;/*要素内のテキストを左寄せ*/
+}
+
+/*最後の要素*/
+.strength:last-child{
+	margin-right: 0;/*要素の外側の余白*/
+}
+
+/* =====================
+  Profile
+===================== */
+
+#profile{
+  background-color: #ECEFF1;
+}
+
+.profile-group{
+	display: flex;
+	padding: 30px 0 90px 0;
+}
+
+.left-content{
+  width: 50%;
+}
+
+.right-content{
+  width: 50%;
+}
+
+.my-face{
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	/*要素の四隅に対して半径が要素の幅または高さの50%になるような円形の丸みを作成する*/
+	border-radius: 50%;
+	background-image: url(../img/my-icon.jpg);
+}
+
+.description-title{
+  margin: 20px 0 5px 0;
+	font-size: 20px;
+}
+
+.description-title:first-child{
+	margin-top: 0;
+}
+
+.description-text{
+  font-size: 16px;
+}
+
+/* =====================
+  Contact
+===================== */
+
+.contact-group{
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  padding: 30px 0 90px 0;
+}
+
+.link-text{
+  text-decoration: underline;/*指定されたテキストに下線が追加*/
+	color: #212121;
+}
+
+.left-contact-content{
+  width: 130px;
+  margin: 0 auto;
+}
+
+.right-contact-content{
+  width: 190px;
+  margin: 0 auto;
+}
+
+/*.right-contact-content クラス内にあるすべてのFontAwesomeのアイコン（.faクラスを持つ要素）に対して*/
+.right-contact-content .fa {
+	font-size: 50px;
+	margin-right: 20px;
+}
+
+.right-contact-content .fa:last-child {
+	margin-right: 0;
+}
+
+/* =====================
+  Footer
+===================== */
+
+footer{
+	width: 100%;
+	height: 60px;
+	background-color: #EC715F;
+	line-height: 60px; /*行の高さ（行間）を指定*/
+}
+
+footer p{
+	font-size: 16px;
+	color: #FAFAFA;
+	text-align: center; /*要素内のテキストを水平方向に中央寄せ*/
+}
+
+/* ========================================================================
+  Media Queries
+======================================================================== */
+
+@media(max-width: 768px){
+
+  /* =====================
+	  setting
+	===================== */
+
+  .container{
+		width: 90%;
+	}
+
+	.sp-none{
+		display: none;
+	}
+
+	.left-content{
+		width: 100%;
+	}
+
+	.right-content{
+		width: 100%;
+	}
+
+	/* =====================
+	  Header
+	===================== */
+
+  header{
+		height: 50px;
+	}
+
+	.logo{
+		height: 50px;
+	}
+
+  /*ハンバーガーメニューの外枠の四角部分*/
+	.menu-box{
+		width: 40px;
+		height: 40px;
+		margin-right: 5%;
+		border: 1px solid #FAFAFA;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: auto;
+	}
+
+  /*ハンバーガーメニューの３本線部分*/
+	.list-bar{
+		display: block;
+		width: 25px;
+		height: 2px;
+		margin: 5px auto;
+		background-color: #FAFAFA;
+	}
+
+	.list-bar:first-child{
+		margin-top: 10px;
+	}
+
+  /*ナビゲーションリストを非表示にし、クリックで呼び出されたときのために*/
+  /*ナビゲーションリストの表示内容を記載している*/
+	.nav-list{
+		display: none;
+		width: 100%;
+		line-height: 50px;
+		border-bottom: 1px solid gray;
+		text-align: center;
+		background-color: rgba(0,0,0,.9);
+	}
+
+	.nav-list:last-child{
+		border: none;
+	}
+
+	/* =====================
+	  MainVisual
+	===================== */
+
+	#mv{
+		background-image: url(../img/code.png);
+	}
+
+	.mv-title{
+		font-size: 40px;
+	}
+
+	.mv-text{
+		font-size: 18px;
+	}
+
+  /* =====================
+    Profile
+  ===================== */
+
+	.production-group{
+		width: 300px;
+	}
+
+	.production{
+		margin-right: 0px;
+	}
+
+  /* =====================
+	Feature
+	===================== */
+
+	#feature{
+		/*background-size: cover;*/
+		/*background-position: center;*/
+	}
+
+	.strength-group{
+		flex-flow: row wrap;
+		width: 320px;
+	}
+
+	.strength{
+		margin-top: 10px;
+		margin-right: 0px;
+	}
+
+	.strength:first-child{
+		margin-top: 0;
+	}
+
+  /* =====================
+	 Profile
+	===================== */
+
+	.profile-group{
+		flex-flow: row wrap;
+		text-align: center;
+	}
+
+	.profile-group .left-content {
+    margin-bottom: 20px;
+  }
+
+  /* =====================
+  Contact
+  ===================== */
+
+  .contact-group{
+		flex-flow: row wrap;
+		width: 100%;
+		text-align: center;
+	}
+
+	.left-contact-content{
+		width: 100%;
+	}
+
+	.right-contact-content{
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.right-contact-content .fa {
+		font-size: 50px;
+		margin-right: 8px;
+	}
+
+}
